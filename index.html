@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>پیاده سازی الگوریتم بانکداران </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://font.limil.org/roya.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="title-bankers">Bankers' Algorithm</h1>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col text-center">
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                        <th scope="col">P/R</th>
+                        <th scope="col">R1</th>
+                        <th scope="col">R2</th>
+                        <th scope="col">R3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">P1</th>
+                            <td contenteditable = "true" id="claim00">3</td>
+                            <td contenteditable = "true" id="claim01">2</td>
+                            <td contenteditable = "true" id="claim02">2</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P2</th>
+                            <td contenteditable = "true" id="claim10">6</td>
+                            <td contenteditable = "true" id="claim11">1</td>
+                            <td contenteditable = "true" id="claim12">3</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P3</th>
+                            <td contenteditable = "true" id="claim20">3</td>
+                            <td contenteditable = "true" id="claim21">1</td>
+                            <td contenteditable = "true" id="claim22">4</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P4</th>
+                            <td contenteditable = "true" id="claim30">4</td>
+                            <td contenteditable = "true" id="claim31">2</td>
+                            <td contenteditable = "true" id="claim32">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                C - تقاضای اولیه
+                </p>
+            </div>
+
+            <div class="col text-center">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                        <th scope="col">P/R</th>
+                        <th scope="col">R1</th>
+                        <th scope="col">R2</th>
+                        <th scope="col">R3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">P1</th>
+                            <td contenteditable = "true" id="allocated00">1</td>
+                            <td contenteditable = "true" id="allocated01">0</td>
+                            <td contenteditable = "true" id="allocated02">0</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P2</th>
+                            <td contenteditable = "true" id="allocated10">6</td>
+                            <td contenteditable = "true" id="allocated11">1</td>
+                            <td contenteditable = "true" id="allocated12">2</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P3</th>
+                            <td contenteditable = "true" id="allocated20">2</td>
+                            <td contenteditable = "true" id="allocated21">1</td>
+                            <td contenteditable = "true" id="allocated22">1</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">P4</th>
+                            <td contenteditable = "true" id="allocated30">0</td>
+                            <td contenteditable = "true" id="allocated31">0</td>
+                            <td contenteditable = "true" id="allocated32">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    A - مقدار نسبت داده شده                
+                </p>
+
+                
+            </div>
+
+            <div class="col text-center d-flex align-content-center flex-wrap white-cell">
+                <table class="table table-bordered white-cell">
+                    <tbody class="white-cell">
+                        <tr>
+                            <th scope="row">R</th>
+                            <td contenteditable = "true" id="resource0">9</td>
+                            <td contenteditable = "true" id="resource1">3</td>
+                            <td contenteditable = "true" id="resource2">6</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">V</th>
+                            <td contenteditable = "true" id="available0">0</td>
+                            <td contenteditable = "true" id="available1">1</td>
+                            <td contenteditable = "true" id="available2">1</td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+
+                
+
+            </div>
+        </div>
+
+
+        <!-- Check button -->
+        <div class="row">
+            <div class="col text-center">
+
+                <div class="form-group row">
+                    <div class="col-md-2 offset-md-5">
+                        <input type="button" class="form-control" id="submit-button" value="ثبت" >
+                        <input type="button" class="form-control" id="check-button" value="بررسی" >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="row">
+            <div class="col text-center">
+                <p id="result" class="green-text">بررسی را بزنید</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="static-bottom" >
+  
+        <!-- Copyright -->
+        <div class="footer-copyright text-center">© 2020 Gholamrezadar</div>
+        <!-- Copyright -->
+  
+    </footer>
+  <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+label, input, .frame {
+    font-family: "B Roya";
+}
+
+.title-bankers
+{
+    color: rgba(46, 204, 113,1.0);
+    margin-bottom: 20px;
+}
+
+.row
+{
+    margin: 20px 0px;
+}
+
+#check-button{
+    background: rgba(46, 204, 113,1.0);
+    color: white;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+#submit-button{
+    background: rgb(206, 206, 206);
+    color: rgb(66, 66, 66);
+    font-size: 18px;
+}
+
+.red-text{
+    color: rgb(204, 46, 59);
+    font-size: 18px;
+}
+.green-text{
+    color: rgba(46, 204, 113,1.0);
+    font-size: 18px;
+}
+
+
+tbody tr:nth-child(odd) {background-color: #f2f2f2;}
+.white-cell tr:nth-child(odd) {background-color: white;}
+
+
+
+
+.footer-copyright
+{
+    margin-top: 120px;
+    font-size: 12px;
+    color: gray;
+}
